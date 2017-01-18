@@ -1,556 +1,249 @@
+body {background: #eee;}
+
+#keyboard {
+    margin: 15px auto 0;
+    width: 794px;
+    height: 315px;
+    background: #d5d9dc;
+    -moz-border-radius-topleft: 7px 21px;
+    -moz-border-radius-topright: 7px 21px;
+    -moz-border-radius-bottomright: 10px;
+    -moz-border-radius-bottomleft: 10px;
+    border-top-left-radius: 7px 21px;
+    border-top-right-radius: 7px 21px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    padding: 50px 0 0 10px;
+    -webkit-box-shadow:
+        inset 0 0 8px #bbb,
+        0 1px 0 #aaa,
+        0 4px 0 #bbb,
+        0 10px 30px #ddd;
+    -moz-box-shadow:
+        inset 0 0 8px #bbb,
+        0 1px 0 #aaa,
+        0 4px 0 #bbb,
+        0 10px 30px #ddd;
+    box-shadow:
+        inset 0 0 8px #bbb,
+        0 1px 0 #aaa,
+        0 4px 0 #bbb,
+        0 10px 30px #ddd;}
+
+ul {list-style-type: none; width: 784px; margin: 0 auto;}
+li {float: left;}
 
 
-
-
- {
-    font-size: 100%;
-    -webkit-text-size-adjust: 100%;
-    -ms-text-size-adjust: 100%;
-    font-size: 13px;
-    line-height: 1.231;
-    font-family: sans-serif;
-}
-
-
-
-a:focus, a:hover, a:active, a:visited {
-    color: #06c;
-    outline: 0;
-}
-
-
-
-
-b, strong { font-weight: bold }
-
-blockquote { margin: 1em 40px }
-
-dfn { font-style: italic }
-
-hr {
+.key{
     display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid #ccc;
-    margin: 1em 0;
-    padding: 0;
-}
-
-ins {
-    background: #ff9;
-    color: #000;
+    color: #aaa;
+    font: bold 9pt arial;
     text-decoration: none;
-}
+    text-align: center;
+    width: 44px;
+    height: 41px;
+    margin: 5px;
+    background: #eff0f2;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    border-top: 1px solid #f5f5f5;
+    -webkit-box-shadow:
+        inset 0 0 25px #e8e8e8,
+        0 1px 0 #c3c3c3,
+        0 2px 0 #c9c9c9,
+        0 2px 3px #333;
+    -moz-box-shadow:
+        inset 0 0 25px #e8e8e8,
+        0 1px 0 #c3c3c3,
+        0 2px 0 #c9c9c9,
+        0 2px 3px #333;
+    box-shadow:
+        inset 0 0 25px #e8e8e8,
+        0 1px 0 #c3c3c3,
+        0 2px 0 #c9c9c9,
+        0 2px 3px #333;
+    text-shadow: 0px 1px 0px #f5f5f5;}
 
-mark {
-    background: #ff0;
-    color: #000;
-    font-style: italic;
-    font-weight: bold;
-}
+.key:active, .keydown {
+    color: #888;
+    background: #ebeced;
+    margin: 7px 5px 3px;
+    -webkit-box-shadow:
+        inset 0 0 25px #ddd,
+        0 0 3px #333;
+    -moz-box-shadow:
+        inset 0 0 25px #ddd,
+        0 0 3px #333;
+    box-shadow:
+        inset 0 0 25px #ddd,
+        0 0 3px #333;
+    border-top: 1px solid #eee;}
 
-pre, code, kbd, samp {
-    font-family: monospace, monospace;
-    _font-family: 'courier new', monospace;
-    font-size: 1em;
-}
-
-pre {
-    white-space: pre;
-    white-space: pre-6 wrap;
-    word-wrap: break-word;
-}
-
-q { quotes: none }
-
-q:before, q:after {
-    content: "";
-    content: none;
-}
-
-small { font-size: 85% }
-
-sub, sup {
-    font-size: 75%;
-    line-height: 0;
-    position: relative;
-    vertical-align: baseline;
-}
-
-sup { top: -0.5em }
-
-sub { bottom: -0.25em }
-
-h1, h2, h3, h4, h5, h6, a, p {
-    padding: 0;
-    margin: 0;
-}
-
-
-
-ul, ol {
-    margin: 0;
-    padding: 0;
-}
-
-dd { margin: 0 0 0 40px }
-
-nav ul, nav ol {
-    list-style: none;
-    list-style-image: none;
-    margin: 0;
-    padding: 0;
-}
-
-
-
-img {
-    border: 0;
-    -ms-interpolation-mode: bicubic;
-    vertical-align: middle;
-}
-
-
-
-form {
-    margin: 0;
-    padding: 0;
-}
-
-fieldset {
-    border: 0;
-    margin: 0;
-    padding: 0;
-}
-
-label { cursor: pointer }
-
-legend {
-    border: 0;
-    *margin-left: -7px;
-    padding: 0;
-}
-
-button, input, select, textarea {
-    outline: 0;
-    border: 0;
-    font-size: 100%;
-    padding: 0;
-    margin: 0;
-    vertical-align: baseline;
-    *vertical-align: middle;
-}
-
-button, input {
-    line-height: normal;
-    *overflow: visible;
-}
-
-table button, table input { *overflow: auto }
-
-button, input[type="button"], input[type="reset"], input[type="submit"] {
-    cursor: pointer;
-    -webkit-appearance: button;
-}
-
-some_nowhitespace { nowhitespace: afterproperty }
-
-/* iOs */
-
-input[type="checkbox"], input[type="radio"] {
-    box-sizing: border-box;
-    cursor: pointer;
-}
-
-input[type="search"] {
-    -webkit-appearance: textfield;
-    -moz-box-sizing: content-box;
-    -webkit-box-sizing: content-box;
-    box-sizing: content-box;
-}
-
-input[type="search"]::-webkit-search-decoration { -webkit-appearance: none }
-
-button::-moz-focus-inner, input::-moz-focus-inner {
-    border: 0;
-    padding: 0;
-}
-
-textarea {
-    overflow: auto;
-    vertical-align: top;
-    resize: vertical;
-}
-
-select { font-size: 14px }
-
-
-table {
-    border-collapse: collapse;
-    border-spacing: 0;
-}
-
-td { vertical-align: top }
-
-
-
-html {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 0;
-    color: #222;
-    background: #ececec;
-    height: 100%;
-}
-
-body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    overflow: hidden;
-}
-
-h1 { font-size: 20px }
-
-h2 { font-size: 15px }
-
-h3 { font-size: 14px }
-
-h4 { font-size: 13px }
-
-h5 { font-size: 12px }
-
-h6 { font-size: 12px }
-
-a { font-size: 12px }
-
-p, input, label, button, textarea, li {
-    font-size: 12px;
-    color: #444;
-}
-
-/* ===[ No floats please ]=== */
-
-h1, h2, h3, h4, h5, h6, p, a, input, label, button, textarea, ul, li, label {
-    position: relative;
-    vertical-align: top;
-    display: inline-block;
-}
-
-body { -webkit-transform-style: preserve-3d;
- -moz-transform-style: preserve-3d}
-
-* { -webkit-user-select: none }
-
-@-webkit-keyframes rotate {
-    0% { -webkit-transform: rotate3d(1,0,0,60deg) rotate3d(0,0,1,20deg) }
-
-    40% { -webkit-transform: rotate3d(1,0,0,88deg) rotate3d(0,0,1,120deg) }
-
-    70% { -webkit-transform: rotate3d(1,0,0,88deg) rotate3d(0,0,1,260deg) }
-
-    90% { -webkit-transform: rotate3d(1,0,0,70deg) rotate3d(0,0,1,260deg) }
-
-    100% { -webkit-transform: rotate3d(1,0,0,60deg) rotate3d(0,0,1,380deg) }
-}
-
-.world {
-    float: left;
-    zoom: 1;
-    font-size: 0;
-    position: absolute;
-    left: 30%;
-    top: 15%;
-    width: 350px;
-    height: 350px;
-    -webkit-transform-style: preserve-3d;
-    -webkit-transform: rotate3d(1,0,0,60deg) rotate3d(0,0,1,0deg);
-    -webkit-animation: rotate 10s ease-in-out infinite;
-}
-
-.world:hover { }
-
-.ground {
-    font-size: 0;
-    position: absolute;
+.fn span {
     display: block;
-    top: -25%;
-    left: -25%;
-    width: 150%;
-    height: 150%;
-    border: 5px dotted #ccc;
-    overflow: visible;
-    -webkit-transform: translate3d(0,0,-1px);
-    -webkit-transform-style: preserve-3d;
-}
+    margin: 14px 5px 0 0;
+    text-align: right;
+    font: bold 6pt arial;
+    text-transform: uppercase;}
+#esc {
+    margin: 6px 15px 0 0;
+    font-size: 7.5pt;
+    text-transform: lowercase;}
 
-.building {
-    font-size: 0;
-    position: absolute;
+
+#numbers li a span {
+    display: block;}
+
+#numbers li a b {
+    margin: 3px 0 3px;
+    display: block;}
+
+#numbers li .alt b {display: block;margin: 0 0 3px;}
+
+#numbers li #delete span {
+    text-align: right;
+    margin: 23px 10px 0 0;
+    font-size: 7.5pt;
+    text-transform: lowercase;}
+
+#qwerty li a span {
     display: block;
-    top: 50%;
-    left: 50%;
-    background: #fc0;
-    width: 50px;
-    height: 50px;
-    cursor: move;
-    overflow: visible;
-    -webkit-transition: all 0.5s ease-out;
-    -webkit-transform: rotate3d(0,0,1,0deg);
-    -webkit-transform-style: preserve-3d;
-}
+    margin: 13px 0 0;
+    text-transform: uppercase;}
 
-.block-1 {
-    top: 0;
-    left: 60%;
-    -webkit-transform: scaleZ(1.5);
-}
+#qwerty li #tab span {
+    text-align: left;
+    margin: 23px 0 0 10px;
+    font-size: 7.5pt;
+    text-transform: lowercase;}
 
-.block-2 {
-    top: 0;
-    left: 30%;
-    -webkit-transform: scaleZ(2.5);
-}
+#qwerty li .alt b {display: block; margin: 3px 0 0;}
+#qwerty li .alt span {margin: 2px 0 0;}
 
-.block-3 {
-    top: 20%;
-    left: 10%;
-    -webkit-transform: scaleZ(1.2);
-}
 
-.block-4 {
-    top: 20%;
-    left: 30%;
-    -webkit-transform: scaleZ(1.8);
-}
-
-.block-5 {
-    top: 20%;
-    left: 50%;
-    -webkit-transform: scaleZ(1.8);
-}
-
-.block-6 {
-    top: 60%;
-    left: 70%;
-    -webkit-transform: scaleZ(1.8);
-}
-
-.block-7 {
-    top: 60%;
-    left: 20%;
-    -webkit-transform: scaleZ(1.5);
-}
-
-.block-8 {
-    top: 80%;
-    left: 60%;
-    -webkit-transform: scaleZ(2.8);
-}
-
-.block-9 {
-    top: 80%;
-    left: 0;
-    -webkit-transform: scaleZ(2.9);
-}
-
-.block-10 {
-    top: 80%;
-    left: 40%;
-    -webkit-transform: scaleZ(3.9);
-}
-
-.block-11 {
-    top: 80%;
-    left: 20%;
-    -webkit-transform: scaleZ(2.9);
-}
-
-.building:hover {
-    -webkit-transform: rotate3d(0,0,1,900deg) scale3d(1, 1, 4);
-    background: #0ae;
-}
-
-.building:hover>li {
-    background: #0ae;
-    opacity: .5;
-}
-
-.building:active {
-    -webkit-transform: translateZ(50px) scale3d(1, 1, 4);
-    background: #09c;
-}
-
-.building:active>li {
-    background: #09c;
-    opacity: .75;
-}
-
-.building>li {
-    font-size: 0;
-    display: inline-block;
-    position: absolute;
-    background: #fc0;
-    -webkit-transition: all 0.3s ease-out;
-}
-
-.building .top {
-    background: rgba(255,212,38,1);
-    width: 50px;
-    height: 50px;
-    -webkit-transform: translate3d(0,0,50px);
-}
-
-.building .west {
-    background: rgba(242,194,0,1);
-    width: 50px;
-    height: 50px;
-    -webkit-transform-origin: 0 0;
-    -webkit-transform: rotate3d(0,1,0,-90deg);
-}
-
-.building .east {
-    background: rgba(217,174,0,1);
-    width: 50px;
-    height: 50px;
-    -webkit-transform-origin: 100% 0;
-    -webkit-transform: rotate3d(0,1,0,90deg);
-}
-
-.building .north {
-    background: rgba(242,194,0,1);
-    width: 50px;
-    height: 50px;
-    -webkit-transform-origin: 0 0;
-    -webkit-transform: rotate3d(1,0,0,90deg);
-}
-
-.building .south {
-    background: rgba(255,204,0,1);
-    width: 50px;
-    height: 50px;
-    -webkit-transform-origin: 100% 100%;
-    -webkit-transform: rotate3d(1,0,0,-90deg);
-}
-
-.road {
-    font-size: 0;
-    position: absolute;
+#asdfg li a span {
     display: block;
-    top: 50%;
-    left: 50%;
-    background: #ccc;
-    width: 350px;
-    height: 30px;
-    overflow: visible;
-    -webkit-transition: all 0.5s ease-out;
-    -webkit-transform: rotate3d(0,0,1,0deg);
-    -webkit-transform-style: preserve-3d;
-}
+    margin: 13px 0 0;
+    text-transform: uppercase;}
 
-.road-1 {
-    top: 60%;
-    left: 40%;
-    -webkit-transform: translateZ(.9px) rotate3d(0,0,1,90deg);
-}
-
-.road-2 {
-    top: 40%;
-    left: 20%;
-    -webkit-transform: rotate3d(0,0,1,180deg);
-}
-
-.road-3 {
-    top: 100%;
-    left: 0;
-    -webkit-transform: rotate3d(0,0,1,180deg);
-}
-
-.car {
-    font-size: 0;
-    position: absolute;
+#asdfg li .alt span {margin: 0; text-transform: lowercase;}
+#asdfg li .alt b {display: block; margin: 3px 0 0;}
+#asdfg li #caps b {
     display: block;
-    //cursor: move;
-    top: 60%;
-    left: 50%;
-    background: #666;
-    width: 5px;
-    height: 10px;
-    overflow: visible;
-    -webkit-transition: all 0.5s ease-out;
-    -webkit-transform: translateZ(2px) rotate3d(0,0,1,90deg);
-    -webkit-transform-style: preserve-3d;
-}
+    background: #999;
+    width: 4px;
+    height: 4px;
+    border-radius: 10px;
+    margin: 9px 0 0 10px;
+    -webkit-box-shadow: inset 0 1px 0 #666;
+    -moz-box-shadow:inset 0 1px 0 #666;
+    box-shadow:inset 0 1px 0 #666;}
+#asdfg li #caps span {
+    text-align: left;
+    margin: 10px 0 0 10px;
+    font-size: 7.5pt;}
+#asdfg li #enter span {
+    text-align: right;
+    margin: 23px 10px 0 0;
+    font-size: 7.5pt;}
 
 
-.car>li {
-    font-size: 0;
-    display: inline-block;
-    position: absolute;
-    background: #fc0;
-    -webkit-transition: all 0.3s ease-out;
-}
+#zxcvb li a span {
+    display: block;
+    margin: 13px 0 0;
+    text-transform: uppercase;}
+#zxcvb li .shiftleft span {
+    text-align: left;
+    margin: 23px 0 0 10px;
+    font-size: 7.5pt;
+    text-transform: lowercase;}
+#zxcvb li .shiftright span {
+    text-align: right;
+    margin: 23px 10px 0 0;
+    font-size: 7.5pt;
+    text-transform: lowercase;}
+#zxcvb li .alt b {display: block;margin: 4px 0 0;}
+#zxcvb li .alt span {margin: 0;}
 
-.car .roof {
-    background: #777;
-    width: 5px;
-    height: 10px;
-    -webkit-transform: translate3d(0,0,5px);
-  -moz-transform: translate3d(0,0,5px);
-}
 
-.car .door-left {
-    background: #555;
-    width: 5px;
-    height: 10px;
-    -webkit-transform-origin: 0 0;
-    -webkit-transform: rotate3d(0,1,0,-90deg);
-  -moz-transform-origin: 0 0;
-    -moz-transform: rotate3d(0,1,0,-90deg);
-}
+#bottomrow li #fn span, #bottomrow li #control span, #bottomrow li #optionleft span, #bottomrow li #commandleft span {
+    display: block;
+    text-align: left;
+    margin: 31px 0 0 8px;
+    font-size: 7.5pt;
+    text-transform: lowercase;}
 
-.car .door-right {
-    background: #777;
-    width: 5px;
-    height: 10px;
-    -webkit-transform-origin: 100% 0;
-    -webkit-transform: rotate3d(0,1,0,90deg);
-  -moz-transform-origin: 100% 0;
-    -moz-transform: rotate3d(0,1,0,90deg);
-}
+#bottomrow li #optionright span, #bottomrow li #commandright span {
+    display: block;
+    text-align: right;
+    margin: 31px 8px 0 0;
+    font-size: 7.5pt;
+    text-transform: lowercase;}
 
-.car .front {
-    background: #666;
-    width: 5px;
-    height: 5px;
-    -webkit-transform-origin: 0 0;
-    -webkit-transform: rotate3d(1,0,0,90deg);
-  -moz-transform-origin: 0 0;
-    -moz-transform: rotate3d(1,0,0,90deg);
-}
+#bottomrow ol li #left span, #bottomrow ol li #right span, #bottomrow ol li #up span, #bottomrow ol li #down span {
+    display: block;
+    margin: 9px 0 0;}
 
-.car .trunk {
-    background: #444;
-    width: 5px;
-    height: 5px;
-    -webkit-transform-origin: 100% 100%;
-    -webkit-transform: translateY(5px) rotate3d(1,0,0,-90deg);
-  -moz-transform-origin: 100% 100%;
-    -moz-transform: translateY(5px) rotate3d(1,0,0,-90deg);
-}
+.fn {height: 26px; width: 46px;}
+#delete {width: 72px;}
+#tab {width: 72px;}
+#caps {width: 85px;}
+#enter {width: 85px;}
+.shiftleft, .shiftright {width: 112px;}
+#fn, #control, .option, .command, #spacebar {height: 49px;}
 
-.car-1 {
-    top: 40%;
-    left: 60%;
-}
+#control {width: 56px;}
+.option {width: 46px;}
+.command {width: 67px;}
+#spacebar {width: 226px;}
 
-.car-2 {
-    top: 40%;
-    left: 80%;
-}
+#left img, #up img, #down img, #right img {border: none;}
+ul ol {list-style-type: none;}
+#down {height: 23px;}
+#up, #left, #right {height: 24px;}
+#left, #right {margin: 30px 5px 5px;}
+#left:active, #right:active {margin: 32px 5px 3px;}
+#up {margin: 5px 5px 1px; border-bottom-right-radius: 0px; border-bottom-left-radius: 0px;}
+#up:active {margin: 8px 5px -2px;}
+#down {margin: 0 5px 5px; border-top-left-radius: 0px; border-top-right-radius: 0px;}
+#down:Active {margin: 3px 5px 4px;}
+#main {
+    width: 700px;
+    padding: 20px 50px;
+    margin: 0 auto 50px;
+    background: #fff;
+    border-radius: 5px;
+    -webkit-box-shadow: 0 1px 2px #aaa;}
 
-.car-3 {
-    top: 60%;
-    left: 95%;
-    -webkit-transform: translateZ(2px) rotate3d(0,0,1,0deg);
-  -moz-transform: translateZ(2px) rotate3d(0,0,1,0deg);
-}
+h1 {
+    color: #888;
+    text-align: center;
+    font: bold 25pt/25pt arial;
+    margin: 30px 0 60px;}
+
+h2 {
+    color: #666;
+    font: 13pt/0pt arial;}
+
+p {
+    color: #999;
+    font: 9pt/17pt arial;
+    margin: 0 0 50px;}
+
+small {
+    font: italic 8pt/12pt arial;
+    color: #aaa;
+    padding: 0 130px 0 0;
+    display: block;}
+
+cite {
+    display: block;
+    padding: 0 0 30px;
+    margin: 0 auto;
+    text-align: center;
+    color: #999;
+    font: italic bold 8pt arial;}
+
+ul, ol {padding: 0px; margin: 0;}
+
+
